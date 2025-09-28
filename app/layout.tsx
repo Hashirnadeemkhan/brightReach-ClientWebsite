@@ -6,8 +6,8 @@ import { Metadata } from "next";
 import "./globals.css"; // Assuming you have global styles
 
 export const metadata: Metadata = {
-  title: "Kode Affinity", // Default title (optional, overridden by page-specific metadata)
-  description: "Innovative IT Solutions by Kode Affinity", // Default description
+  title: "Bright Reach Solution", // Default title (optional, overridden by page-specific metadata)
+  description: "Innovative IT Solutions by Bright Reach Solution", // Default description
 };
 const poppins = Montserrat({
   subsets: ["latin"],
