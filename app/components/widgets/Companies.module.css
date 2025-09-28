@@ -1,0 +1,61 @@
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hide the overflow so that the logos appear within the boundary */
+}
+
+.sliderTrack {
+  display: flex;
+  width: calc(200px * 10); /* Adjust based on the number of logos */
+  animation: scroll 20s linear infinite; /* Control the speed here */
+}
+
+.sliderItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px; /* Adjust the width of each logo */
+  padding: 10px;
+  margin: 0 50px; /* Horizontal spacing between items */
+}
+
+/* Animation to move the slider */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.logo {
+  transition: width 0.3s, height 0.3s; /* Smooth transition for size change */
+  max-width: 100%; /* Ensure logos do not overflow their container */
+}
+
+/* Media query for small screens */
+@media (max-width: 640px) {
+  .logo {
+    width: 80px; /* Set width to 80px for small screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .sliderItem {
+    min-width: 150px; /* Reduce the minimum width of each logo item */
+    margin: 0 20px; /* Reduce horizontal spacing */
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderItem {
+    padding: 5px; /* Reduce padding on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderItem {
+    margin: 0 5px; /* Further reduce spacing for very small screens */
+    padding: 3px; /* Further reduce padding */
+  }
+}

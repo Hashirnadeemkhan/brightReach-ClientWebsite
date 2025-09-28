@@ -1,0 +1,54 @@
+/* Custom styles for Quill content display */
+.ql-content {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  .ql-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .ql-content pre {
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+  
+  .ql-content blockquote {
+    border-left: 4px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+  }
+  
+  .ql-content h1,
+  .ql-content h2,
+  .ql-content h3,
+  .ql-content h4,
+  .ql-content h5,
+  .ql-content h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .ql-content ul,
+  .ql-content ol {
+    padding-left: 2em;
+  }
+  
+  /* Fix for Quill editor content display */
+  .ql-content .ql-align-center {
+    text-align: center;
+  }
+  
+  .ql-content .ql-align-right {
+    text-align: right;
+  }
+  
+  .ql-content .ql-align-justify {
+    text-align: justify;
+  }
+  
+  
