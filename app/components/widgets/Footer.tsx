@@ -61,9 +61,9 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4 text-lg">Resources</h3>
             <ul className="space-y-2">
-              <li><Link href="#" className="hover:underline">Portfolio</Link></li>
               <li><Link href="/privacy" className="hover:underline">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:underline">Terms & Conditions</Link></li>
+              <li><Link href="/termss" className="hover:underline">Terms & Conditions</Link></li>
+              <li><Link href="/cancellation-and-refund-policy" className="hover:underline">Cancellation and Refund Policy</Link></li>
             </ul>
           </div>
 
