@@ -33,10 +33,10 @@ export default function Footer() {
               />
             </div>
             <div className="flex justify-center md:justify-start space-x-4 mb-4">
-              <Link href="#"><FaFacebookF size={20} /></Link>
-              <Link href="#"><FaInstagram size={20} /></Link>
-              <Link href="#"><FaTiktok size={20} /></Link>
-              <Link href="#"><FaYoutube size={20} /></Link>
+              <Link href="https://www.instagram.com/bright_reach_solutions?igsh=bDdhY3FqZHNyOTZv&utm_source=qr" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} className="hover:text-custom-red transition-colors" /></Link>
+              <Link href="#"><FaFacebookF size={20} className="hover:text-custom-red transition-colors" /></Link>
+              <Link href="#"><FaTiktok size={20} className="hover:text-custom-red transition-colors" /></Link>
+              <Link href="#"><FaYoutube size={20} className="hover:text-custom-red transition-colors" /></Link>
             </div>
             <p className="text-sm">
               At <span className="font-semibold">Bright Reach Solution</span>, we
@@ -82,7 +82,18 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                  +44 7718 923178 
+                  +44 7718 923178
+                </a>
+              </li>
+              <li>
+                📱{" "}
+                <a
+                  href="https://wa.me/447848177145"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  +44 7848 177145
                 </a>
               </li>
               <li>

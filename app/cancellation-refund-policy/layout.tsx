@@ -8,9 +8,9 @@ export default function CancellationRefundPolicyLayout({
 }) {
   return (
     <div>
-      <Layout isAboutOnly={true} isReducedHeight={true} />
+      <Layout isCancellationPolicyOnly={true} isReducedHeight={true} />
       <main>{children}</main>
-      <Footer />
+
     </div>
   );
 }

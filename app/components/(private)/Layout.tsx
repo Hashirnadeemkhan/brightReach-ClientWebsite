@@ -9,10 +9,11 @@ interface LayoutProps {
   isAboutOnly?: boolean
   isPricingOnly?: boolean
   isProjectOnly?: boolean
+  isCancellationPolicyOnly?: boolean
   isReducedHeight?: boolean
 }
 
-const Layout: React.FC<LayoutProps> = ({ isAboutOnly, isPricingOnly, isProjectOnly, isReducedHeight }) => {
+const Layout: React.FC<LayoutProps> = ({ isAboutOnly, isPricingOnly, isProjectOnly, isCancellationPolicyOnly, isReducedHeight }) => {
   return (
     <div
       className="bg-cover bg-center"
@@ -28,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ isAboutOnly, isPricingOnly, isProjectOn
         <div className="pt-6">
           <Navbar />
         </div >
-        <Hero isAboutOnly={isAboutOnly} isPricingOnly={isPricingOnly} isProjectOnly={isProjectOnly} />
+        <Hero isAboutOnly={isAboutOnly} isPricingOnly={isPricingOnly} isProjectOnly={isProjectOnly} isCancellationPolicyOnly={isCancellationPolicyOnly} />
       </div>
     </div>
   )

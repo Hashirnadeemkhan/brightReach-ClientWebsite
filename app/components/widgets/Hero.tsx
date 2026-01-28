@@ -19,17 +19,18 @@ interface HeroProps {
   isAboutOnly?: boolean
   isPricingOnly?: boolean
   isProjectOnly?: boolean
+  isCancellationPolicyOnly?: boolean
 }
 
-const Hero: React.FC<HeroProps> = ({ isAboutOnly, isPricingOnly, isProjectOnly }) => {
+const Hero: React.FC<HeroProps> = ({ isAboutOnly, isPricingOnly, isProjectOnly, isCancellationPolicyOnly }) => {
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     setIsLoaded(true)
   }, [])
 
-  if (isAboutOnly || isPricingOnly || isProjectOnly) {
-    // Render only the About, Pricing, or Projects heading when the prop is passed
+  if (isAboutOnly || isPricingOnly || isProjectOnly || isCancellationPolicyOnly) {
+    // Render only the About, Pricing, Projects, or Cancellation Policy heading when the prop is passed
     let title = "";
     let breadcrumbPage = "";
 
@@ -42,6 +43,9 @@ const Hero: React.FC<HeroProps> = ({ isAboutOnly, isPricingOnly, isProjectOnly }
     } else if (isProjectOnly) {
       title = "Our Projects";
       breadcrumbPage = "Projects";
+    } else if (isCancellationPolicyOnly) {
+      title = "Cancellation and Refund Policy";
+      breadcrumbPage = "Cancellation Policy";
     }
 
     return (

@@ -10,7 +10,7 @@ export default function ProjectLayout({
     <div>
       <Layout isProjectOnly={true} isReducedHeight={true} />
       <main>{children}</main>
-      <Footer />
+  
     </div>
   );
 }
