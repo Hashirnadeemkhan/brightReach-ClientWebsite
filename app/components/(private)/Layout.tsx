@@ -8,10 +8,11 @@ import "../../globals.css"
 interface LayoutProps {
   isAboutOnly?: boolean
   isPricingOnly?: boolean
+  isProjectOnly?: boolean
   isReducedHeight?: boolean
 }
 
-const Layout: React.FC<LayoutProps> = ({ isAboutOnly, isPricingOnly, isReducedHeight }) => {
+const Layout: React.FC<LayoutProps> = ({ isAboutOnly, isPricingOnly, isProjectOnly, isReducedHeight }) => {
   return (
     <div
       className="bg-cover bg-center"
@@ -27,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ isAboutOnly, isPricingOnly, isReducedHe
         <div className="pt-6">
           <Navbar />
         </div >
-        <Hero isAboutOnly={isAboutOnly} isPricingOnly={isPricingOnly} />
+        <Hero isAboutOnly={isAboutOnly} isPricingOnly={isPricingOnly} isProjectOnly={isProjectOnly} />
       </div>
     </div>
   )

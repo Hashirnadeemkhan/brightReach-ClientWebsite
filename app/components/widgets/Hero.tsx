@@ -18,19 +18,31 @@ import {
 interface HeroProps {
   isAboutOnly?: boolean
   isPricingOnly?: boolean
+  isProjectOnly?: boolean
 }
 
-const Hero: React.FC<HeroProps> = ({ isAboutOnly, isPricingOnly }) => {
+const Hero: React.FC<HeroProps> = ({ isAboutOnly, isPricingOnly, isProjectOnly }) => {
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     setIsLoaded(true)
   }, [])
 
-  if (isAboutOnly || isPricingOnly) {
-    // Render only the About or Pricing heading when the prop is passed
-    const title = isAboutOnly ? "About Us" : "Pricing"
-    const breadcrumbPage = isAboutOnly ? "About" : "Pricing"
+  if (isAboutOnly || isPricingOnly || isProjectOnly) {
+    // Render only the About, Pricing, or Projects heading when the prop is passed
+    let title = "";
+    let breadcrumbPage = "";
+
+    if (isAboutOnly) {
+      title = "About Us";
+      breadcrumbPage = "About";
+    } else if (isPricingOnly) {
+      title = "Pricing";
+      breadcrumbPage = "Pricing";
+    } else if (isProjectOnly) {
+      title = "Our Projects";
+      breadcrumbPage = "Projects";
+    }
 
     return (
       <Wrapper>
