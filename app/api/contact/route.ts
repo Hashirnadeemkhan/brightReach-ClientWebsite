@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
 
     // ✅ Production: send email via Resend
     const { data, error } = await resend.emails.send({
-      from: "Angle Tyres <noreply@angletyres.com>", // apna verified domain/email daalo
+      from: "Bright Reach Solution<noreply@brightreachsolutions.com>", // apna verified domain/email daalo
       to: [process.env.BUSINESS_EMAIL as string],
       subject: `New Contact Form Submission from ${name}`,
       html: `
