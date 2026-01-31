@@ -4,7 +4,7 @@ import Journey from "@/app/components/widgets/Journey";
 import CoreValue from '@/app/components/widgets/CoreValue';
 import Expertise from '@/app/components/widgets/Expertise';
 import OurProcess from '@/app/components/widgets/OurProcess';
-import Testimonals from '@/app/components/widgets/Testimonals';
+import Reviews from '@/app/components/widgets/Testimonals';
 import FAQSection from '@/app/components/widgets/Faqs';
 import Companies from '@/app/components/widgets/Companies';
 import Layout from "../../components/(private)/Layout";
@@ -25,7 +25,7 @@ const page = () => {
       <Expertise/>
       <OurProcess/>
       <FAQSection/>
-      <Testimonals/>
+      <Reviews/>
       <Companies/>
 
     </div>
