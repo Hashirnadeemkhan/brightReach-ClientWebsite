@@ -1,5 +1,6 @@
 import ContactComponent from "@/app/components/widgets/Contact";
 import ContactLayout from "@/app/components/(private)/ContactLayout";
+import WhatsAppButton from "@/app/components/widgets/WhatsAppButton";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,15 +12,14 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <div>
- 
       <ContactLayout>
-  
         <></>
       </ContactLayout>
 
-
       <ContactComponent />
 
+      {/* WhatsApp Button */}
+      <WhatsAppButton />
     </div>
   );
 };

@@ -127,15 +127,12 @@ const Navbar = () => {
             </div>
 
             <div className="hidden lg:block space-x-2">
-              <Link
-                href="/calendly"
-                className="bg-transparent border-2 border-red-500 text-black hover:text-white py-2 px-6 rounded-full hover:bg-red-500 transition-all duration-300"
-              >
-                Calendly
-              </Link>
-         
+
+
 <Link
-  href="tel:+441274054457"
+  href="https://wa.me/+447718923178"
+  target="_blank"
+  rel="noopener noreferrer"
   className="bg-red-500 text-white py-2 px-7 rounded-full hover:bg-red-600 transition-all duration-300"
 >
   Call us
@@ -223,7 +220,9 @@ const Navbar = () => {
 
                 <div className="mt-4 space-y-2">
                   <Link
-                    href="/contact"
+                    href="https://wa.me/+447718923178"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition-all duration-300"
                     onClick={handleLinkClick}
                   >

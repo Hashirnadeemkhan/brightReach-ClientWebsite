@@ -19,7 +19,7 @@ const ProjectPage = () => {
       url: "https://Angelstyres.co.uk",
       image: "/assets/angels_tyres.jpg",
       tags: ["Web Design", "Booking System", "Mobile Responsive"],
-      color: "from-blue-600 to-indigo-700"
+      color: "from-red-600 to-yellow-600"
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ const ProjectPage = () => {
       url: "https://V-classchauffeur.com",
       image: "/assets/classchaufuer.jpg",
       tags: ["Luxury Brand", "Booking Platform", "CRM Integration"],
-      color: "from-purple-600 to-pink-700"
+      color: "from-gray-900 via-yellow-500 to-gray-800"
     },
     {
       id: 4,
@@ -151,12 +151,7 @@ const ProjectPage = () => {
                         <div className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
                       </a>
 
-                      <button className="relative bg-slate-800/80 hover:bg-slate-700/80 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 border border-slate-700 hover:border-slate-600 flex items-center justify-center gap-2">
-                        <span>Case Study</span>
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                      </button>
+                    
                     </div>
                   </div>
                 </div>

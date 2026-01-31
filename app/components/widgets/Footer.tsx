@@ -74,19 +74,9 @@ export default function Footer() {
               <li>📍 South Accommodation Road, Leeds</li>
               <li>📍 West Yorkshire, LS9 8LH</li>
               <li>📧 <a href="mailto:info@brightreachsolutions.com" className="hover:underline">info@brightreachsolutions.com</a></li>
+          
               <li>
-                📱{" "}
-                <a
-                  href="https://wa.me/447718923178"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  +44 7718 923178
-                </a>
-              </li>
-              <li>
-                📱{" "}
+                   📞{" "}
                 <a
                   href="https://wa.me/447848177145"
                   target="_blank"
@@ -96,15 +86,7 @@ export default function Footer() {
                   +44 7848 177145
                 </a>
               </li>
-              <li>
-                📞{" "}
-                <a
-                  href="tel:+441274054457"
-                  className="hover:underline"
-                >
-                  +44 1274 054457
-                </a>
-              </li>
+            
             </ul>
           </div>
         </div>
