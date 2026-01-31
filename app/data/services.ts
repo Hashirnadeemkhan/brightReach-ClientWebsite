@@ -16,7 +16,7 @@ export const services: Service[] = [
         image: "/assets/web.png",
         slug: "web-design-development",
         information:
-            "At KodeAffinity, we specialize in creating responsive, visually appealing, and high-performing websites tailored to your business needs. Whether you need a simple landing page or a complex e-commerce platform, our team ensures seamless functionality and an exceptional user experience. From custom web design to full-stack development, we bring your vision to life."
+            "At bright reach solutions, we specialize in creating responsive, visually appealing, and high-performing websites tailored to your business needs. Whether you need a simple landing page or a complex e-commerce platform, our team ensures seamless functionality and an exceptional user experience. From custom web design to full-stack development, we bring your vision to life."
     },
     {
         id: "2",
@@ -24,7 +24,7 @@ export const services: Service[] = [
         description: "Native and cross-platform mobile apps",
         slug: "mobile-development",
         image: "/assets/mobile.png",
-        information:"In today’s mobile-first world, having a robust app is essential. KodeAffinity offers custom mobile app development services for iOS, Android, and cross-platform solutions. We focus on creating intuitive, feature-rich apps that engage users and drive business growth."    },
+        information:"In today’s mobile-first world, having a robust app is essential. bright reach solutions offers custom mobile app development services for iOS, Android, and cross-platform solutions. We focus on creating intuitive, feature-rich apps that engage users and drive business growth."    },
     {
         id: "3",
         title: "SEO & Content Writing",
@@ -40,7 +40,7 @@ export const services: Service[] = [
         slug: "logo-illustration",
         image: "/assets/illustration.png",
         information:
-"Your logo is the face of your brand. At KodeAffinity, we craft custom logos and illustrations that capture your brand’s essence and leave a lasting impression. Whether you need a minimalist logo or intricate illustrations, we’ve got you covered."    },
+"Your logo is the face of your brand. At bright reach solutions, we craft custom logos and illustrations that capture your brand’s essence and leave a lasting impression. Whether you need a minimalist logo or intricate illustrations, we’ve got you covered."    },
     {
         id: "5",
         title: "Branding & Graphic Design",
@@ -57,7 +57,7 @@ export const services: Service[] = [
         image: "/assets/animation.png",
         slug: "animation",
         information:
-"Animation is a powerful tool to tell your story and captivate your audience. KodeAffinity offers custom animation services for explainer videos, advertisements, and social media content. Our animations are designed to grab attention and leave a lasting impression."    
+"Animation is a powerful tool to tell your story and captivate your audience. bright reach solutions offers custom animation services for explainer videos, advertisements, and social media content. Our animations are designed to grab attention and leave a lasting impression."    
     },
     {
         id: "7",
@@ -66,7 +66,7 @@ export const services: Service[] = [
         image: "/assets/SMM.png",
         slug: "social-media",
         information:
-"Social media is a powerful platform to connect with your audience. KodeAffinity offers comprehensive social media marketing services, including content creation, strategy development, and performance tracking. We help you build a strong online presence and achieve your business goals."    },
+"Social media is a powerful platform to connect with your audience. bright reach solutions offers comprehensive social media marketing services, including content creation, strategy development, and performance tracking. We help you build a strong online presence and achieve your business goals."    },
     {
         id: "8",
         title: "SaaS",
@@ -74,5 +74,41 @@ export const services: Service[] = [
         slug: "saas",
         image: "/assets/saas.png",
         information:
-"KodeAffinity specializes in SaaS development, creating scalable, secure, and user-friendly software solutions tailored to your business needs. From concept to deployment, we ensure your SaaS platform delivers exceptional performance and value."    },
+"bright reach solutions specializes in SaaS development, creating scalable, secure, and user-friendly software solutions tailored to your business needs. From concept to deployment, we ensure your SaaS platform delivers exceptional performance and value."    },
+    {
+        id: "9",
+        title: "Artificial Intelligence Optimization",
+        description: "AI-powered solutions for business growth",
+        slug: "ai-optimization",
+        image: "/assets/Ai.webp",
+        information:
+"Transform your business with our AI optimization services. At bright reach solutions, we leverage cutting-edge artificial intelligence technologies to enhance your operations, automate processes, and unlock new opportunities. From machine learning algorithms to intelligent automation, we help you stay ahead of the competition."
+    },
+    {
+        id: "10",
+        title: "Google Ads",
+        description: "Maximize your ROI with strategic advertising",
+        slug: "google-ads",
+        image: "/assets/googleads.png",
+        information:
+"Drive targeted traffic and increase conversions with our Google Ads management services. Our certified experts create and optimize high-performing ad campaigns that reach your ideal customers at the right time. From search ads to display campaigns, we ensure maximum return on your advertising investment."
+    },
+    {
+        id: "11",
+        title: "Google Guarantee",
+        description: "Boost credibility and trust with certification",
+        slug: "google-guarantee",
+        image: "/assets/goodfirms.png",
+        information:
+"Elevate your business credibility with our Google Guarantee services. We help service-based businesses get verified through Google's trusted platform, increasing customer confidence and driving more qualified leads. Our experts guide you through the entire verification process."
+    },
+    {
+        id: "12",
+        title: "Shopify Development",
+        description: "Custom eCommerce solutions on Shopify",
+        slug: "shopify-development",
+        image: "/assets/shopify.png",
+        information:
+"Launch or optimize your online store with our custom Shopify development services. From theme customization to app integration and payment processing, we create seamless shopping experiences that convert visitors into customers. Our solutions are tailored to scale with your business."
+    },
 ];
