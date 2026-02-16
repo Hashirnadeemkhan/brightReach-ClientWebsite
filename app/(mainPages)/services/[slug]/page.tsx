@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   if (!service) {
     return {
-      title: "Service Not Found | Kode Affinity",
-      description: "The requested service could not be found. Explore our other IT services at Kode Affinity.",
+      title: "Service Not Found | Bright Reach Solutions",
+      description: "The requested service could not be found. Explore our other IT services at Bright Reach Solutions.",
     };
   }
 

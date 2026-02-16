@@ -11,9 +11,9 @@ import Layout from "../../components/(private)/Layout";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Kode Affinity | Leading IT Services Company",
+  title: "About Bright Reach Solutions | Leading IT Services Company",
   description:
-    "Learn more about Kode Affinity and our mission to deliver top-notch IT solutions. Our team provides expert web development, mobile apps, branding, and more.",
+    "Learn more about Bright Reach Solutions and our mission to deliver top-notch IT solutions. Our team provides expert web development, mobile apps, branding, and more.",
 };
 
 const page = () => {

@@ -13,9 +13,9 @@ type BreadcrumbItem =
 
 // Static metadata for the Services overview page
 export const metadata: Metadata = {
-  title: "Our IT Services | Kode Affinity",
+  title: "Our IT Services | Bright Reach Solutions",
   description:
-    "Kode Affinity offers a range of IT services, including web development, mobile apps, branding, SEO, and more. Let us help you with custom solutions for your business.",
+    "Bright Reach Solutions offers a range of IT services, including web development, mobile apps, branding, SEO, and more. Let us help you with custom solutions for your business.",
 };
 
 const Service = () => {
