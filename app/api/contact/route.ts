@@ -13,6 +13,7 @@ export async function POST(request: NextRequest) {
     const { data, error } = await resend.emails.send({
       from: "Bright Reach Solution<noreply@brightreachsolutions.com>", // apna verified domain/email daalo
       to: [process.env.BUSINESS_EMAIL as string],
+
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -38,12 +39,12 @@ export async function POST(request: NextRequest) {
 
     if (error) {
       console.error("❌ Resend error:", error)
-      return NextResponse.json({ error: "Failed to send email" }, { status: 500 })
+      return NextResponse.json({ error: error.message || "Failed to send email" }, { status: 400 })
     }
 
     return NextResponse.json({ success: true, data })
-  } catch (error) {
+  } catch (error: any) {
     console.error("❌ API error:", error)
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 })
+    return NextResponse.json({ error: error.message || "Internal server error" }, { status: 500 })
   }
 }

@@ -9,10 +9,17 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useRouter, usePathname } from "next/navigation"
 import { useMediaQuery } from "../hooks/use-media-query"
 
+const callOptions = [
+  { flag: "🇺🇸", region: "United States", number: "(916) 916-7722", tel: "tel:+19169167722" },
+  { flag: "🇬🇧", region: "United Kingdom", number: "+44 7848 177145", tel: "tel:+447848177145" },
+]
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false)
+  const [isCallOpen, setIsCallOpen] = useState(false)
+  const callRef = useRef<HTMLDivElement>(null)
   const navRef = useRef<HTMLDivElement>(null)
   const isTablet = useMediaQuery("(max-width: 1024px)")
 
@@ -35,6 +42,16 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
+  }, [])
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (callRef.current && !callRef.current.contains(e.target as Node)) {
+        setIsCallOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
   const menuVariants = {
@@ -126,19 +143,43 @@ const Navbar = () => {
               ))}
             </div>
 
-            <div className="hidden lg:block space-x-2">
-
-
-<Link
-  href="https://wa.me/+447718923178"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-red-500 text-white py-2 px-7 rounded-full hover:bg-red-600 transition-all duration-300"
->
-  Call us
-</Link>
-
-
+            <div className="hidden lg:block relative" ref={callRef}>
+              <button
+                onClick={() => setIsCallOpen(!isCallOpen)}
+                className="bg-red-500 text-white py-2 px-7 rounded-full hover:bg-red-600 transition-all duration-300 flex items-center gap-2"
+              >
+                Call us
+                <IoIosArrowDown className={`transition-transform duration-200 ${isCallOpen ? "rotate-180" : ""}`} />
+              </button>
+              <AnimatePresence>
+                {isCallOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden z-50"
+                  >
+                    <p className="text-xs text-gray-400 px-4 pt-3 pb-1 uppercase tracking-wide font-semibold">Select a region</p>
+                    {callOptions.map((opt) => (
+                      <button
+                        key={opt.tel}
+                        onClick={() => {
+                          setIsCallOpen(false)
+                          window.location.href = opt.tel
+                        }}
+                        className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-red-50 transition-colors group"
+                      >
+                        <span className="text-2xl">{opt.flag}</span>
+                        <span>
+                          <span className="block text-xs text-gray-400 group-hover:text-red-400">{opt.region}</span>
+                          <span className="block text-sm font-semibold text-gray-800 group-hover:text-red-600">{opt.number}</span>
+                        </span>
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             <button
@@ -219,15 +260,43 @@ const Navbar = () => {
                 ))}
 
                 <div className="mt-4 space-y-2">
-                  <Link
-                    href="https://wa.me/+447718923178"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition-all duration-300"
-                    onClick={handleLinkClick}
+                  {/* Mobile Call us — expandable */}
+                  <button
+                    onClick={() => setIsCallOpen(!isCallOpen)}
+                    className="w-full bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     Call us
-                  </Link>
+                    <IoIosArrowDown className={`transition-transform duration-200 ${isCallOpen ? "rotate-180" : ""}`} />
+                  </button>
+                  <AnimatePresence>
+                    {isCallOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="overflow-hidden rounded-xl border border-gray-100 shadow-sm"
+                      >
+                        {callOptions.map((opt) => (
+                          <button
+                            key={opt.tel}
+                            onClick={() => {
+                              setIsCallOpen(false)
+                              handleLinkClick()
+                              window.location.href = opt.tel
+                            }}
+                            className="w-full flex items-center gap-3 px-4 py-3 bg-white hover:bg-red-50 transition-colors group"
+                          >
+                            <span className="text-2xl">{opt.flag}</span>
+                            <span className="text-left">
+                              <span className="block text-xs text-gray-400 group-hover:text-red-400">{opt.region}</span>
+                              <span className="block text-sm font-semibold text-gray-800 group-hover:text-red-600">{opt.number}</span>
+                            </span>
+                          </button>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                   <Link
                     href="/calendly"
                     className="block bg-transparent border-2 border-red-500 text-black hover:text-white py-2 px-4 rounded-full hover:bg-red-500 transition-all duration-300"

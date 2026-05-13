@@ -70,13 +70,45 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="font-bold mb-4 text-lg">Contact</h3>
-            <ul className="space-y-2 text-sm">
-              <li>📍 South Accommodation Road, Leeds</li>
-              <li>📍 West Yorkshire, LS9 8LH</li>
-              <li>📧 <a href="mailto:info@brightreachsolutions.com" className="hover:underline">info@brightreachsolutions.com</a></li>
-          
-              <li>
-                   📞{" "}
+            <ul className="space-y-3 text-sm">
+              {/* UK Office */}
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5">📍</span>
+                <span>
+                  <span className="font-semibold block text-white/80 text-xs uppercase tracking-wide mb-0.5">UK Office</span>
+                  South Accommodation Road, Leeds,<br />West Yorkshire, LS9 8LH
+                </span>
+              </li>
+
+              {/* Chicago Office */}
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5">📍</span>
+                <span>
+                  <span className="font-semibold block text-white/80 text-xs uppercase tracking-wide mb-0.5">Chicago Office</span>
+                  25 E Washington St Suite 1115,<br />Chicago, IL 60602, United States
+                </span>
+              </li>
+
+              {/* Maine Head Office */}
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5">📍</span>
+                <span>
+                  <span className="font-semibold block text-white/80 text-xs uppercase tracking-wide mb-0.5">Head Office — Maine</span>
+                  5396 Lincoln Avenue, Unit C,<br />Cypress, CA 90630
+                </span>
+              </li>
+
+              {/* Email */}
+              <li className="flex items-start gap-2">
+                <span>📧</span>
+                <a href="mailto:info@brightreachsolutions.com" className="hover:underline break-all">
+                  info@brightreachsolutions.com
+                </a>
+              </li>
+
+              {/* Phone — UK */}
+              <li className="flex items-start gap-2">
+                <span>📞</span>
                 <a
                   href="https://wa.me/447848177145"
                   target="_blank"
@@ -86,14 +118,24 @@ export default function Footer() {
                   +44 7848 177145
                 </a>
               </li>
-            
+
+              {/* Phone — US */}
+              <li className="flex items-start gap-2">
+                <span>📞</span>
+                <a href="tel:+19169167722" className="hover:underline">
+                  (916) 916-7722
+                </a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div className="text-center mt-6 border-t border-gray-500 pt-4 bg-black w-full pb-3">
-        <p>© 2024 Bright Reach Solution. All Rights Reserved.</p>
+      <div className="text-center mt-6 border-t border-gray-500 pt-4 bg-black w-full pb-4 px-4 space-y-1">
+        <p className="text-sm">© 2024 Bright Reach Solution. All Rights Reserved.</p>
+        <p className="text-xs text-white/60">
+          Powered &amp; Managed by <span className="text-white/80 font-semibold">Aftab Amin</span> — Secure payments handled through the official account of Aftab Ameen.
+        </p>
       </div>
     </footer>
   );
