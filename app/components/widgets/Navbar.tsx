@@ -10,8 +10,8 @@ import { useRouter, usePathname } from "next/navigation"
 import { useMediaQuery } from "../hooks/use-media-query"
 
 const callOptions = [
-  { flag: "🇺🇸", region: "United States", number: "(916) 916-7722", tel: "tel:+19169167722" },
-  { flag: "🇬🇧", region: "United Kingdom", number: "+44 7848 177145", tel: "tel:+447848177145" },
+  { badge: "US", badgeColor: "bg-red-600", region: "United States", number: "(916) 916-7722", tel: "tel:+19169167722" },
+  { badge: "UK", badgeColor: "bg-blue-700", region: "United Kingdom", number: "+44 7848 177145", tel: "tel:+447848177145" },
 ]
 
 const Navbar = () => {
@@ -170,7 +170,7 @@ const Navbar = () => {
                         }}
                         className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-red-50 transition-colors group"
                       >
-                        <span className="text-2xl">{opt.flag}</span>
+                        <span className={`text-xs font-bold text-white px-1.5 py-0.5 rounded ${opt.badgeColor}`}>{opt.badge}</span>
                         <span>
                           <span className="block text-xs text-gray-400 group-hover:text-red-400">{opt.region}</span>
                           <span className="block text-sm font-semibold text-gray-800 group-hover:text-red-600">{opt.number}</span>
@@ -287,7 +287,7 @@ const Navbar = () => {
                             }}
                             className="w-full flex items-center gap-3 px-4 py-3 bg-white hover:bg-red-50 transition-colors group"
                           >
-                            <span className="text-2xl">{opt.flag}</span>
+                            <span className={`text-xs font-bold text-white px-1.5 py-0.5 rounded ${opt.badgeColor}`}>{opt.badge}</span>
                             <span className="text-left">
                               <span className="block text-xs text-gray-400 group-hover:text-red-400">{opt.region}</span>
                               <span className="block text-sm font-semibold text-gray-800 group-hover:text-red-600">{opt.number}</span>
