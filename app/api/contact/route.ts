@@ -11,10 +11,12 @@ export async function POST(request: NextRequest) {
 
     // ✅ Production: send email via Resend
     const { data, error } = await resend.emails.send({
-      from: "Bright Reach Solution<noreply@brightreachsolutions.com>", // apna verified domain/email daalo
+  from: "Bright Reach Solution <info@brightreachsolutions.com>",
+  replyTo: "info@brightreachsolutions.com", // apna verified domain/email daalo
       to: [process.env.BUSINESS_EMAIL as string],
 
       subject: `New Contact Form Submission from ${name}`,
+      text: `New Contact Form Submission from ${name}\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone || "Not provided"}\n...`, // simple text version
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #16a34a; border-bottom: 2px solid #16a34a; padding-bottom: 10px;">
@@ -48,3 +50,4 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: error.message || "Internal server error" }, { status: 500 })
   }
 }
+-
