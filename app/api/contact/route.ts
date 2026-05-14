@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
     // ✅ Production: send email via Resend
     const { data, error } = await resend.emails.send({
   from: "Bright Reach Solution <info@brightreachsolutions.com>",
-  replyTo: "info@brightreachsolutions.com", // apna verified domain/email daalo
+  replyTo: email , // apna verified domain/email daalo
       to: [process.env.BUSINESS_EMAIL as string],
 
       subject: `New Contact Form Submission from ${name}`,
