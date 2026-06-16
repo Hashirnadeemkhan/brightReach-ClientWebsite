@@ -4,6 +4,10 @@ const nextConfig = {
       domains: [
         "res.cloudinary.com", // For Cloudinary images
         "firebasestorage.googleapis.com", // For Firebase Storage images if needed
+        "utfs.io", // UploadThing CDN
+      ],
+      remotePatterns: [
+        { protocol: "https", hostname: "*.ufs.sh" }, // UploadThing (newer regional hosts)
       ],
     },
   };

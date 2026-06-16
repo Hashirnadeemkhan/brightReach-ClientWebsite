@@ -10,7 +10,7 @@ import { useRouter, usePathname } from "next/navigation"
 import { useMediaQuery } from "../hooks/use-media-query"
 
 const callOptions = [
-  { badge: "US", badgeColor: "bg-red-600", region: "United States", number: "(916) 916-7722", tel: "tel:+19169167722" },
+  { badge: "US", badgeColor: "bg-red-600", region: "United States", number: "(916) 954-5121", tel: "tel:+19169545121"},
   { badge: "UK", badgeColor: "bg-blue-700", region: "United Kingdom", number: "+44 7848 177145", tel: "tel:+447848177145" },
 ]
 
@@ -75,6 +75,8 @@ const Navbar = () => {
     { name: "About us", path: "/about" },
     { name: "Projects", path: "/project" },
     { name: "Services", path: "/service", isDropdown: true },
+    { name: "Blog", path: "/blog" },
+    { name: "Reviews", path: "/reviews" },
     { name: "Contact us", path: "/contact" },
   ]
 

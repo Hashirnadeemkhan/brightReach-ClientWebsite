@@ -1,6 +1,5 @@
 
-import Footer from "./components/widgets/Footer";
-import WhatsAppButton from "./components/widgets/WhatsAppButton";
+import SiteChrome from "./components/(private)/SiteChrome";
 import "./styles/quill-content.css"
 import { Montserrat } from "next/font/google";
 import { Metadata } from "next";
@@ -26,8 +25,7 @@ export default function RootLayout({
     <html lang="en">
     <body className={` bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100`}>
       {children}
-      <WhatsAppButton />
-      <Footer/>
+      <SiteChrome />
     </body>
   </html>
   );
