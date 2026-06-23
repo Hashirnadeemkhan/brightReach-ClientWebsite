@@ -1,5 +1,4 @@
-// src/app/admin/dashboard/add/page.tsx
-// Create form: title (validated) + Quill rich text + UploadThing image.
+
 "use client"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
