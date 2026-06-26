@@ -84,8 +84,8 @@ const Navbar = () => {
     <>
       <div ref={navRef} className="h-[100px]">
         <nav
-          className={`bg-white shadow-md mx-auto w-[90%] rounded-lg transition-all duration-300 ease-in-out ${
-            isSticky ? "fixed top-0 left-0 right-0 z-50 mt-1" : ""
+          className={`bg-white shadow-md mx-auto w-[90%] rounded-lg transition-all duration-300 ease-in-out relative z-50 ${
+            isSticky ? "fixed top-0 left-0 right-0 mt-1" : ""
           }`}
         >
           <div className="px-4 md:px-10 flex justify-between items-center h-20">
@@ -113,7 +113,7 @@ const Navbar = () => {
                       >
                         {item.name} <IoIosArrowDown className="transition-transform group-hover:rotate-180" />
                       </Link>
-                      <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                      <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                         <div className="py-1">
                           {services.map((service) => (
                             <Link

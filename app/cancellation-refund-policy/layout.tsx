@@ -11,6 +11,7 @@ export default function CancellationRefundPolicyLayout({
       <Layout isCancellationPolicyOnly={true} isReducedHeight={true} />
       <main>{children}</main>
 
+
     </div>
   );
 }
